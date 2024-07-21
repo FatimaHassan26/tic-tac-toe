@@ -82,7 +82,13 @@ const gameController = (() => {
             (board[0] === board[4] && board[4] === board[8] && board[0] !== "") ||
             (board[2] === board[4] && board[4] === board[6] && board[2] !== "")
         ){
-            winMessageText.innerHTML = `${activePlayer.playerName} Won!`
+            if (activePlayer.playerName === ""){
+                winMessageText.innerHTML = `${activePlayer.marker} Won!`
+            }
+            else{
+                winMessageText.innerHTML = `${activePlayer.playerName} Won!`
+            }
+            //winMessageText.innerHTML = `${activePlayer.playerName} Won!`
             winningMessageElement.classList.add('show');
         
             gameOver= true;
