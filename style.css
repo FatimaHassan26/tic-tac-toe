@@ -5,7 +5,7 @@
 .container {
     display: grid;
     justify-content: center;
-    gap: 60px;
+    gap: 20px;
     padding: 15px;
     overflow: auto;
 }
@@ -30,7 +30,12 @@ input {
     border-radius: 10px;
     box-shadow: none;
     padding:10px;
-    color: #d6b6ab;
+}
+
+.instructions {
+    font-size:20px;
+    color: #d39783;
+    text-align: center;
 }
 button {
     color: var(--mainColor);
@@ -83,6 +88,7 @@ button:active {
 }
 .winMessage {
     font-size: 5rem;
+
 }
 .winning-message.show {
     display: flex;
