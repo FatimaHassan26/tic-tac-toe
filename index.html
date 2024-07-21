@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">TIC-TAC-TOE</div>
+
+        <div class="PlayerNames">
+            <input type="text" id="Player1", placeholder="Player1 - X ">
+            <input type="text" id="Player2", placeholder="Player2 - O">
+            <button id="start-button">Start</button>
+        </div>
+        <div class="gameBoard" id="gameBoard">
+            <div class="cell" data-cell-index="0"></div>
+            <div class="cell" data-cell-index="1"></div>
+            <div class="cell" data-cell-index="2"></div>
+            <div class="cell" data-cell-index="3"></div>
+            <div class="cell" data-cell-index="4"></div>
+            <div class="cell" data-cell-index="5"></div>
+            <div class="cell" data-cell-index="6"></div>
+            <div class="cell" data-cell-index="7"></div>
+            <div class="cell" data-cell-index="8"></div>
+        </div>
+        <div>
+            <button id="restart-button">Restart</button>
+        </div>
+        <div class="winning-message" id="winning-message">
+            <div class="winMessage" id="winMessage"></div>
+            <div>Reload page to restart</div>
+                
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
