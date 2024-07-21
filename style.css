@@ -1,0 +1,88 @@
+:root {
+    --mainColor: #E0CBC4;
+
+}
+.container {
+    display: grid;
+    justify-content: center;
+    gap: 60px;
+}
+
+.title {
+    color: var(--mainColor);
+    display: flex;
+    font-size: 100px;
+    justify-content: center;
+}
+
+.PlayerNames {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 50px;
+    
+}
+input {
+    font-size:20px;
+    border-radius: 10px;
+    box-shadow: none;
+    padding:10px;
+    color: #d6b6ab;
+}
+button {
+    color: var(--mainColor);
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 30px;
+    box-shadow: none;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: #d6b6ab;
+    color: rgb(175, 173, 173);
+}
+
+button:active {
+    background-color: white;
+    color: var(--mainColor);
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 160px);
+    grid-template-rows: repeat(3, 160px);
+    align-content: center;
+    justify-content: center;
+}
+.cell {
+    display: grid;
+    border: 1px solid black;
+    font-size: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winning-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: none;
+}
+.winMessage {
+    font-size: 5rem;
+}
+.winning-message.show {
+    display: flex;
+    flex-direction: column;
+}
