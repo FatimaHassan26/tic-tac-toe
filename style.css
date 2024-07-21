@@ -32,6 +32,12 @@ input {
     padding:10px;
 }
 
+.instructions {
+    font-size:20px;
+    color: #d39783;
+    text-align: center;
+}
+
 button {
     color: var(--mainColor);
     height: 50px;
