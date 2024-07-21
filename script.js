@@ -14,6 +14,7 @@ const players = (playerName, marker) => {
 const gameController = (() => {
     const restartBtn= document.getElementById("restart-button")
     const startBtn = document.getElementById('start-button')
+    let winningMessageElement = document.getElementById('winning-message')
     let activePlayer;
     let player1;
     let player2;
@@ -41,10 +42,7 @@ const gameController = (() => {
                 const index = cell.getAttribute('data-cell-index');
                 board[index] = ""
             })
-
             winMessageText.innerHTML="";
-            document.getElementById('Player1').value = "";
-            document.getElementById('Player2').value = "";
             playGame()
         })
     }
@@ -84,7 +82,9 @@ const gameController = (() => {
             (board[0] === board[4] && board[4] === board[8] && board[0] !== "") ||
             (board[2] === board[4] && board[4] === board[6] && board[2] !== "")
         ){
-            winMessageText.innerHTML = `Player ${activePlayer.playerName} Won!`
+            winMessageText.innerHTML = `${activePlayer.playerName} Won!`
+            winningMessageElement.classList.add('show');
+        
             gameOver= true;
         }
         else if (allisFilled()) {
